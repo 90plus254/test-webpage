@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collections - Manukato</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/manukato\ logo\ billboard.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: blur(2px);
+        }
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay for contrast */
+
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* To contain absolutely positioned elements */
+            z-index: 1; /* Ensure content is above background */
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .select-purchase {
+            display: flex;
+            align-items: center;
+        }
+
+        select {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .purchase-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #00ff44;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .purchase-link:hover {
+            background-color: #0056b3;
+        }
+        h1{
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+<head>
+    </head>
+<body>
+    <div id="background"></div>
+    <div id="overlay"></div>
+
+<div class="container">
+        <h1>Our Collections</h1>
+    <div class="product">
+        <img src="images/9PM MB.png" alt="Perfume 1">
+        <div class="product-info">
+            <h3>9PM by Afnan</h3>
+            <p>A bold, masculine fragrance with top notes of bergamot and pear, heart notes of mint, lavender, and cinnamon, and base notes of patchouli, amber, vanilla, and tonka bean.</p>
+            <div class="select-purchase">
+                <select id="floral-bloom-size"> <option value="30ml">30ml designer - none</option>
+                    <option value="50ml">50ml designer - none</option>
+                    <option value="100ml">100ml original - ksh. 6,000</option>
+                </select>
+                <a href="#" class="purchase-link" onclick="openWhatsApp('Floral Bloom')">confirm purchase via whatsapp</a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="images/BROWN ORCHID MB.png" alt="Perfume 2">
+        <div class="product-info">
+            <h3>Brown Orchid by Fragrance World</h3>
+            <p>Rich and floral notes of ylang-ylang, French jasmine and citrus come together in the opening to form a sweet narcotic fragrance that is capable of inducing an aphrodisiac response in people, especially women. The combination of black currant and black truffle emits a strong aroma that gives the air an intensely romantic essence.</p>
+            <div class="select-purchase">
+                <select id="citrus-burst-size"> <option value="30ml">50ml rose selected - ksh.300</option>
+                    <option value="50ml">50ml rose selected - ksh.450</option>
+                    <option value="100ml">80ml original- ksh.2,100</option>
+                </select>
+                <a href="#" class="purchase-link" onclick="openWhatsApp('Citrus Burst')">confirm purchase via whatsapp</a>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <img src="images/BROWN ORCHID MB.png" alt="Perfume 2">
+        <div class="product-info">
+            <h3>Brown Orchid by Fragrance World</h3>
+            <p>Rich and floral notes of ylang-ylang, French jasmine and citrus come together in the opening to form a sweet narcotic fragrance that is capable of inducing an aphrodisiac response in people, especially women. The combination of black currant and black truffle emits a strong aroma that gives the air an intensely romantic essence.</p>
+            <div class="select-purchase">
+                <select id="citrus-burst-size"> <option value="30ml">50ml rose selected - ksh.300</option>
+                    <option value="50ml">50ml rose selected - ksh.450</option>
+                    <option value="100ml">80ml original- ksh.2,100</option>
+                </select>
+                <a href="#" class="purchase-link" onclick="openWhatsApp('Citrus Burst')">confirm purchase via whatsapp</a>
+            </div>
+        </div>
+    </div>
+        <script>
+            function openWhatsApp(productName) {
+                const selectedSize = document.getElementById(productName.toLowerCase().replace(/ /g, '-') + "-size").value;
+                const phoneNumber = "254700405228"; 
+                const message = encodeURIComponent(`I would like to purchase ${productName}, size ${selectedSize}.`);
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(whatsappURL, '_blank');
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manukato Brands</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Use Roboto as the primary font */
+            margin: 0;
+            overflow-x: hidden;
+            background-image: url('images/manukato logo billboard.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0; /* Increased padding */
+            color: #fff;
+            text-shadow: 2px 2px 4px #000; /* Added text shadow */
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 10px; /* Added spacing */
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 60px; /* Increased margin */
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s; /* Added transform to transition */
+            border: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: scale(1.05); /* Added scale transform on hover */
+        }
+
+        .container {
+            max-width: 1200px; /* Increased container width */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .featured-product {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px; /* Increased padding */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .featured-product img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased minmax */
+            grid-gap: 30px; /* Increased gap */
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 60px; /* Increased padding */
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s; /* Added transform */
+            border: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Added scale on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-button {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+            }
+            h1 {
+                font-size: 2.5em; /* Slightly smaller on mobile */
+            }
+            .featured-product img {
+                max-width: 200px;
+            }
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Manukato Brands</h1>
+        <p>Where Flavor Meets Taste</p>
+    </header>
+
+    <nav>
+        <a href="ourcollection.html" class="nav-button">Our Collections</a>
+        <a href="menscollection.html" class="nav-button">Men's</a>
+        <a href="#" class="nav-button">Women's</a>
+        <a href="#" class="nav-button">About Us</a>
+        <a href="#" class="nav-button">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="featured-product">
+            <h2>Exquisite Fragrances for Every Occasion</h2>
+            <p></p>
+            <img src="images/Background 3.jpg" alt="Featured Perfume">
+        </div>
+
+        <div class="cta-section">
+            <h2>Discover Our Collections</h2>
+            <p>Explore our wide range of scents, from fresh and floral to rich and woody.</p>
+            <a href="#" class="cta-button">View All Collections</a>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/aris poison.jpeg" alt="Perfume 1">
+                <h3>Poison By Aris</h3>
+                <p>Poison by Aris is a beautiful fragrance for women, which is a delicate floral blend of aromas. It hypnotizes and mesmerizes with a meticulous selection of ingredients. The perfume combines distinct notes to deliver a beautiful scent that is ideal for daily wear. This perfume is available in a 100ml bottle in the EDP concentration. The scent features aqueous, temperately sweet litchi, with a hint of tangy pomegranate blossom, and a subtle, refined nuance of water lily. All of which seamlessly settle on the very floral note of Chinese pink peony and fresh guava. Musk and various woody notes constitute the base on which the rest of your perfume pyramid lies.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/fragrance world perfumes.jpeg" alt="Perfume 2">
+                <h3>Fragrance World Brand Perfumes</h3>
+                <p>Fragrance World is reputable company that offers a wide range of fragrances of your favorite and well known scents.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/aris technique.jpeg" alt="Perfume 3">
+                <h3>Technique By Aris</h3>
+                <p>This perfume for men is formed using a variety of distinct ingredients and offers longevity.Technique by Aris for Men will let your olfactory senses explore new horizons that are challenging, inspiring, and intriguing. The captivating scent will magnetize you with its energy, thanks to its unique composition.</p>
+            </div>
+             <div class="product-card">
+                <img src="images/KIDS 1 MB.png" alt="Perfume 4">
+                <h3>Boys(kids collection)</h3>
+                <p>Our collection offers our young ones an exquisite entry into the fragrance world.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/KIDS 2.png" alt="Perfume 5">
+                <h3>Girls(kids collection)</h3>
+                <p>Our collection offers our young ones an exquisite entry into the fragrance world.</p>
+            </div>
+            <div class="product-card">
+                <img src="perfume6.jpg
